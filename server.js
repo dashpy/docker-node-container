@@ -1,8 +1,12 @@
 var redis = require('redis');
-var client = redis.createClient('6379',process.env.DB_HOST || '127.0.0.1');
 var express = require('express')
 var bodyParser = require('body-parser')
-
+var client = null;
+try{
+  client = redis.createClient('6379',process.env.DB_HOST || '127.0.0.1');
+}catch(e){
+  console.error("NO DB CONECTION...")
+}
 
 
 var app = express()
@@ -19,12 +23,22 @@ var app = express()
 
 
     async function createEntry(req, res) {
-      client.set(new Date(), new Date());
-      res.send("success");
+      if(client != null){
+        client.set(new Date(), new Date());
+        res.send("success");
+      }else{
+        console.error("NO DB CONECTION...");
+      }
     };
 
     async function getLogs(req, res){
-      client.keys('*', (err, keys) => {
-        res.send({number:keys.length});
-      });
+      if(client != null){
+        client.keys('*', (err, keys) => {
+          res.send({number:keys.length});
+        });
+      }else{
+        console.error("NO DB CONECTION...");
+      }
+
+
     };

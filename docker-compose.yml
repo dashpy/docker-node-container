@@ -2,7 +2,7 @@ version: "3"
 services:
   web:
     # replace username/repo:tag with your name and image details
-    image: federoman/new-docker-container
+    image: federoman/node-container
     environment:
       DB_HOST: redis
     deploy:
@@ -34,7 +34,7 @@ services:
     ports:
       - "6379:6379"
     volumes:
-	# make sure that a data folder exist in your container
+# make sure that a data folder exist in your container
       - "/home/docker/data:/data"
     deploy:
       placement:
