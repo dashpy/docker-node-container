@@ -34,3 +34,4 @@ Services:
 
 # Docker-machine
 The yml file configuration is ready to use with docker-machine and use as a cluster with docker swarm.
+[This is a little presentation](https://docs.google.com/presentation/d/1waV7Ce4FYWpx10brVeX-TqwnqlvyFUauDvTg6hvetV0/edit?usp=sharing) that I made for my work, you can find a little of more information there, but as always you can find more information at the oficial documentation.
