@@ -1,6 +1,3 @@
-# docker-node-container
-Docker Test Lab with node
-
 # Directory:
 
 - server.js
