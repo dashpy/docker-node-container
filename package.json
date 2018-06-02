@@ -1,0 +1,31 @@
+{
+  "name": "docker-node-container",
+  "version": "1.0.0",
+  "description": "Node server with express and with conection to Redis DB",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/dashpy/docker-node-container.git"
+  },
+  "keywords": [
+    "node",
+    "server",
+    "express",
+    "redis",
+    "docker"
+  ],
+  "author": "federoman",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/dashpy/docker-node-container/issues"
+  },
+  "homepage": "https://github.com/dashpy/docker-node-container#readme",
+  "dependencies": {
+    "express": "^4.16.3",
+    "redis": "^2.8.0"
+  }
+}
